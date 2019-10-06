@@ -1,0 +1,39 @@
+#navbar ul li,
+#navbar ul,
+#navbar h1{
+    float: none;
+}
+
+#navbar ul li{
+    display: block;
+    border-bottom: darkgray dashed .5px;
+}
+
+#navbar h1{
+    text-align: center;
+}
+
+.container{
+    max-width: 700px;
+
+}
+
+
+#showcase .showcase-content{
+    padding-top:50px; 
+}
+#home-info .info-img{
+  display: none;
+}
+
+#home-info .info-content{
+    float: none;
+    width: 100%;
+  
+    /* why overflow hidden */
+}
+
+.box{
+    float: none;
+    width: 100%;
+}
