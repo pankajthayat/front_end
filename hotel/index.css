@@ -1,0 +1,152 @@
+ul{
+    list-style-type: none;
+    float: right;
+    margin: 0px 35px;
+    /* display: inline; */
+    
+}
+li{
+    display: inline-block;
+    padding: 15px;
+}
+li:hover{
+    background: brown;
+    /* color: coral; */     
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    display: block;
+    /* overflow: hidden;  */
+    /* why is overfloat working as same as header:after...  what is overflow */
+}
+
+.logo{
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+header::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.detail-section{
+    
+    background: url("../images/showcase.jpg");
+    color: white;
+    height: 80vh;
+    display: table;
+    width: 100%;
+
+    
+}
+
+.details-content a{
+    padding: 10px;
+    background: black;
+    margin: 10px;
+}
+
+h1{
+    margin: 0;
+    color: white;
+    font-size: 3rem;
+}
+
+.enjoy{
+    color: tomato;
+}
+.details-content{
+    /* margin: 200px; */
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+a:hover{
+    background: brown;
+}
+
+img{
+    width: 50%;
+    height: 60vh;
+    display: inline-block;
+
+}
+.hotel-detail{
+    display: inline-block;
+    width: 50%;
+    height: 60vh;
+    background: #333;
+    color: white;
+    float: right;
+    text-align: center;
+}
+article h2 span{
+    color: coral;
+}
+
+footer{
+    background: #333;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+
+
+footer{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+
+.info{
+    width: calc(100% / 3);
+    height: 40vh;
+    display: inline-block;
+    text-align: center;
+}
+
+.location{
+background: rgb(245, 245, 245);
+
+
+}
+.meals{
+    background: rgb(243, 155, 123);
+
+}
+
+.room{
+    background: rgb(245, 245, 245);
+
+}
+
+.info-section{
+    font-size: 0;
+}
+
+.info-section h3{
+    font-size: 1.5rem;
+}
+.info-section p{
+    font-size: 1rem;
+}
