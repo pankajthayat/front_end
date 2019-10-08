@@ -42,6 +42,10 @@ textarea{
     background: #444;
     color: #fff;
 }
+.bg-dark-plus{
+    background: #333;
+    color: #fff;
+}
 .img-wrapper{
     background: #93cb52;
     height: 80px;
@@ -212,6 +216,9 @@ padding: 2rem;
 } */
 
 /* client */
+#clients-section h1{
+    padding-top: 2rem;
+}
 #clients-section ul{
     justify-content: center;
 }
