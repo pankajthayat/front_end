@@ -42,7 +42,15 @@ textarea{
     background: #444;
     color: #fff;
 }
-
+.img-wrapper{
+    background: #93cb52;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    margin: auto;
+    border-radius: 50%;
+    
+}
 
 
 
@@ -52,6 +60,7 @@ textarea{
 ul{
     display: flex;
     justify-content: flex-end;
+    padding: 0 15px;
 
 }
 ul:first-child{
@@ -83,6 +92,13 @@ nav{
 }
 #navbar div{
     margin: auto 0;
+}
+
+#navbar>div>h1{
+    padding: 0 15px;
+}
+#navbar>div>h1>span>i{
+    padding: 0 5px ;
 }
 
 /* header */
@@ -134,22 +150,39 @@ padding: 1rem 0;
     text-align: center;
     /* padding-bottom: 1rem; */
 }
-
+.box div{
+    display: inline-block;
+    vertical-align: middle;
+}
 
 /* about description */
 #about{
     display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
+    /* flex-wrap: wrap; */
+
 }
+
 
 #img-section{
     /* background: url("../images/people.jpg") center center/cover; */
-
+    flex: 1 1 50%;
+}
+#img-section img{
+    width: 100%;
+    height: 100%;
+}
+#description{
+    padding: 20px;
+    flex: 1 1 50%;
+}
+#team-description h3{
+    padding: 10px 0;
 }
 
-
-
+#team-description p{
+    padding: .5rem 0;
+    border-bottom: #444 dotted 1px;
+}
 
 
 /* contact-details */
@@ -164,6 +197,11 @@ flex: 1 1 auto;
 .map{
     flex: 1 1 auto;
 }
+
+.form button{
+    border: none;
+    border-radius: 5px;
+}
 /* not working why?? */
 /* #contact-details:first-child{
     padding: 5rem;
@@ -173,10 +211,24 @@ flex: 1 1 auto;
 padding: 2rem;
 } */
 
+/* client */
+#clients-section ul{
+    justify-content: center;
+}
+#clients-section li{
+    padding: 3rem;
+}
+#clients-section img{
+max-width: 120px;
+}
 
-
-
-
+#clients-section li:hover{
+    cursor: pointer;
+    background: none;
+}
+#clients-section{
+    text-align: center;
+}
 
 
 
@@ -191,8 +243,18 @@ footer{
 }
 
 
+/* .red{
+    width: 100px;
+    height: 100px;
+    background: red;
+    overflow: ;
+}
 
-
+.blue{
+    background: blue;
+    width: 200px;
+    height: 300px;;
+} */
 
 /* why image is overflowing div... when i give max height to ims's wrapper???? 
 why vertical-align works in table-cell
