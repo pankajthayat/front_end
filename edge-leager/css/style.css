@@ -91,7 +91,7 @@ nav{
     color: #fff;
     opacity: 0.9;
     /* position: fixed; */
-    position: -webkit-sticky; /* Safari & IE */
+    position: sticky; /* Safari & IE */
 position: sticky;
 top: 0;
     width: 100%;
@@ -149,7 +149,7 @@ font-size: 4rem;
 /* section 1 */
 .container{
     display: flex;
-    padding: 0 25rem;
+    padding: 0 10rem;
     flex-wrap: wrap; 
 }
 .container:first-child{
