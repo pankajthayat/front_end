@@ -1,8 +1,86 @@
+
+/* Navbar */
+
 nav{
 flex-direction: column;
-align-content: center;
+
+}
+nav div{
+    padding-bottom: 0.8rem;
+    text-align: center;
 }
 ul{
     justify-content: center;
+}
+#navbar{
+    padding: 1.2rem;
+}
 
+
+
+
+/* header */
+    
+header{
+    text-align: center;
+    height: 70vh;;
+}
+
+
+
+
+
+
+
+
+/* client */
+#clients-section ul li:last-child{
+   display: none;
+}
+
+#clients-section li{
+    padding: 1rem;
+    flex: 1 1 auto;
+}
+
+#clients-section ul{
+        justify-content: space-evenly;
+        
+}
+
+/* section 1 */
+.container{
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap; 
+    flex-direction: column;
+}
+#clients-section img{
+    max-width: 60px;
+    }
+.container>div{
+
+}
+
+.box{
+    min-height: 10rem;
+}
+
+.box div{
+    display: inline-block;
+    vertical-align: middle;
+   
+}
+
+
+/* des */
+#img-section{
+    display: none
+}
+
+
+/* contact */
+
+.map{
+ display: none;
 }
