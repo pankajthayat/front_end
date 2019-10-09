@@ -6,39 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flex-Demo</title>
     <style>
-    li{
-        list-style: none;
-        padding: 10px;
-        background: coral;
-        margin: 10px;
-    }
-    .one{
-        flex: 1 1 100%;
-    }
-    .two{
-flex: 1 1 auto;
-    }
-    .three{
-        flex: 1 1 auto;
-    }
-    ul{
-        display: flex;
-        
-    }
-    h1{
-        margin: 0;
-    }
+.one{
+    height: 100px;
+    width: 100px;
+    background: yellow;
+    position: fixed;
+}
+.inside{
+    height: 100px;
+    width: 100px;
+    background: coral;
+
+  
+}
+.two{
+    display: table-cell;
+    height: 100px;
+    width: 100px;
+    background: gray;
+}
     </style>
 </head>
 <body>
     <div class="container">
-        <ul>
-            <!-- <li><h1>Hello</h1></li> -->
-            <li class="one">Item One</li>
-            <li class="two">Item Two</li>
-            <li class="tree">Item Three</li>
-            <!-- <li class="four"></li> -->
-        </ul>
+            <div class="one">
+                <!-- <div class="inside">
+                </div>
+                <div class="two">Item Two</div> -->
+            </div>
+            <div class="two">Item Two</div>
+            <div class="tree">Item Three</div>
+
     </div>
 </body>
 </html>
