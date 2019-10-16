@@ -25,6 +25,7 @@ footer{
 body{
     background: var(--light-color);
     font-family: 'Lato', sans-serif;
+    line-height: 1.6rem;
 }
 
 
@@ -64,10 +65,18 @@ body{
     /* border-end-end-radius: 20%;; */
 
 }
-#sports{
-    background: var(--sports-color) ;
+.title{
+    display: inline-block;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 0rem 0.5rem;
+    text-transform: uppercase;
+    font-size: .6rem;
 
 }
+
 
 /* navbar */
 .container{
@@ -109,52 +118,65 @@ nav{
     color: var(--primary-grey);
     margin-left: 0.2rem;
 }
-/*  grid */
-.grid{
-    display: grid;
-    grid-template-rows: 55Vh 120vh 50vh ;
-}
 
-/* article */
 
-#article{
-    position: relative;
+
+/* header */
+header{
     background: url("../image_resources/featured.jpg") center center/cover;
+    position: relative;
+
 }
-#sports-container{
-    width: var(--max-width);
+
+header::before{
+    content: ""; 
+     background: black;
+    opacity: 0.6; 
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+
+}
+
+.header-container{
+    max-width: var(--max-width);
+    padding: 0.7rem;
     margin: auto;
-    padding: 1rem;
-    z-index: 1;
-}
-#sports-container h1{
-    color: white;
-    text-transform: uppercase;
-}
-/* pictures */
+    height: 50vh;
+    z-index: 11;;
+    color: #fff;
+    
+    /* ------------->  make overlay as made in edge ledger <---------------------------- */
+    /* position: absolute; */
+    /* background: rgba(0, 0, 0, 0.6); */
 
-#editor-pic{
-    background: lightcyan;
-}
-
-.box-grid{
     display: grid;
-    grid-template-columns:repeat(3,1fr) ;
-    /* grid-template-rows: ; */
-}
-.box:first-child{
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-.box{
-    background: chocolate;
-    padding: 0.2rem;
-    /* height: 100px; */
-    margin: 0.2rem;
+    align-content: center;
+
+    }
+
+ .header-content{
+    color: #FFF;
+    position: relative;
+    /* without position :  relative the overlay is not working. why?? */
 
 }
+.header-content a{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: var(--primary-color);
+    padding: 0.8rem 1rem;
+}
 
-img{
-    width: 50%;
-    height: 80%;
+.header-content h{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sports{
+    background: var(--sports-color) ;
+
 }
