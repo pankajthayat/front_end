@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    <style>
+        .grid {
+            display: grid;
+        }
+
+        .item {
+            background: lightcoral;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .item:first-child {
+            /* width: 200px; */
+            display: inline;
+        }
+
+        .item:nth-child(2) {
+            /* width: 200px; */
+            background: yellowgreen;
+            display: inline;
+        }
+        p{
+            background: gainsboro;
+        }
+        h1{
+            background: green;
+        }
+        .four h1{
+            width: 400px;
+        }
+        .four{
+            display: grid;
+        }
+        .title {
+  display: inline-block;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 0rem 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+.sports {
+  background: indigo;
+  color: white;
+}
+
+/* .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+    <div class="grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item four">
+                <div class="title sports">
+                        sports
+                    </div>
+            <h1>4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto cum veritatis eos architecto
+                similique expedita inventore, corporis dolorem quis rem dolore, impedit ipsam exercitationem dicta sed
+                eius voluptates nam sint alias illo, ut repudiandae nostrum. Quod provident, totam praesentium repellat
+                ex ad nisi voluptate perferendis laborum, ea consequuntur velit.</p>
+        </div>
+       
+    </div>
+    <div class="grid2">
+            second grid
+        </div>
+</div>
+</body>
+
+</html>
