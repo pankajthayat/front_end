@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +13,8 @@
   --max-width: 1100px;
   --primary-grey: #777;
   --sports-color: #f99500;
+  --ent-color: #a66bbe;
+  --tech-color: #009cff;
 }
 
 /*  */
@@ -22,10 +24,20 @@ body {
   line-height: 1.6rem;
 }
 
+
+
+
+
+
 /* utility */
 
 .text-primary {
   color: #c72727;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: 'Staatliches', cursive;
+  padding: 0.6rem 0;
 }
 
 .bg-primary {
@@ -67,6 +79,18 @@ body {
   font-size: 0.6rem;
 }
 
+
+/* .content{
+    display: inline-block;
+} */
+
+
+
+
+
+
+
+
 /* navbar */
 .container {
   max-width: var(--max-width);
@@ -80,6 +104,7 @@ body {
 nav {
   background: #fff;
   position: sticky;
+  top:0;
 }
 
 .container #logo img {
@@ -107,12 +132,20 @@ nav {
   margin-left: 0.2rem;
 }
 
+
+
+
+
+
+
 /* header */
 header {
   background: url("../image_resources/featured.jpg") center center/cover;
   position: relative;
 }
-
+header a{
+  display: inline-block;
+}
 header::before {
   content: "";
   background: black;
@@ -127,8 +160,8 @@ header::before {
   max-width: var(--max-width);
   padding: 0.7rem;
   margin: auto;
-  height: 50vh;
-  z-index: 11;
+  min-height: 60vh;
+  /* z-index: 11; */
   color: #fff;
 
   /* ------------->  make overlay as made in edge ledger <---------------------------- */
@@ -136,20 +169,25 @@ header::before {
   /* background: rgba(0, 0, 0, 0.6); */
 
   display: grid;
+  grid-template-columns: 1fr 1fr;
   align-content: center;
 }
 
 .header-content {
   color: #fff;
   position: relative;
+  /* overflow: hidden; */
   /* without position :  relative the overlay is not working. why?? */
+}
+.header-content p{
+  padding: 1rem 0;
 }
 .header-content a {
   position: relative;
   text-decoration: none;
   color: #fff;
   background: var(--primary-color);
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .header-content h {
@@ -162,18 +200,28 @@ header::before {
   background: var(--sports-color);
 }
 
+
+
+
+
+
+
+
+
+
 /* editors picks */
 .editor-container {
   margin: auto;
   max-width: var(--max-width);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 5rem 15rem 30rem 15rem;
+  /* grid-template-rows: 5rem 15rem 30rem 15rem; */
 }
 .box {
-  background: coral;
+  background: #fff;
   margin: 10px;
-  padding: 10px;
+  padding: 1rem;
+ 
 }
 /* .box:first-child{
     grid-column-start: 1;
@@ -181,7 +229,7 @@ header::before {
 } */
 
 .editor-container #heading {
-  background: cyan;
+ 
   grid-column-start: 1;
   grid-column-end: 4;
   margin: 10px;
@@ -189,12 +237,41 @@ header::before {
 
 .box:nth-child(2) {
   grid-column: 1 / span 2;
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.5rem;
 
+}
+.box:nth-child(3) {
+  background: var(--dark-color);
+  color: #fff;
+  }
+  
 .box img {
-  height: 12rem;
+ width: 100%;
+ padding: 0.5rem;
 }
 
+.tech{
+    background: var(--tech-color);
+}
+
+.ent{
+    background: var(--ent-color);
+}
+
+.box:nth-child(7) {
+background: var(--primary-color);
+color: #fff;
+  }
+
+
+.editor-content{
+  padding: 0.5rem;
+}
+
+
+/* footer  */
 footer {
   background: var(--dark-color);
 }
@@ -204,13 +281,12 @@ footer {
   height: 20rem;
   margin: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 70% 20%;
+  grid-template-rows: 70% 25%;
 }
 
 .footer-box {
-
   margin: 10px;
-  padding-top: 1.2rem;
+  padding: 1.2rem 0;
   color: #fff;
 }
 .footer-box input {
@@ -223,6 +299,9 @@ footer {
   border: 0;
   color: #fff;
 }
+.footer-box input[type="text"] {
+padding-left: 0.5rem;
+  }
 .footer-box h3{
     padding-bottom: 0.5rem ;
 }
@@ -235,6 +314,8 @@ footer {
   background: var(--primary-grey);
   color: #fff;
   text-align: center;
+  font-size:0.8rem;
+
 }
 .footer-box button{
     width: 40%;
@@ -242,8 +323,52 @@ footer {
     color: #fff;
   background: var(--secondry-color);
   border: 0;
+  font-size: 0.8rem;
 }
 
 .footer-box img {
   width: 180px;
+}
+
+
+
+/* about page */
+
+.about-container{
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  column-gap:1.2rem;
+  grid-template-columns: minmax(20rem, 1fr) minmax(20rem, 1fr)  minmax(20rem, 1fr);
+  grid-template-rows: minmax(10rem) minmax(10rem) minmax(10rem) minmax(10rem) ;
+
+}
+
+#join{
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1rem;
+}
+
+#join p{
+padding-bottom: 1rem;
+}
+#join button{
+  width: 100%;
+  background: var(--dark-color);
+  color: #fff;
+  padding: 0.5rem 0;
+  border: 0;
+  
+}
+#about-content{
+  background: #fff;
+  grid-column: 1/span 2;
+  grid-row: 1/span 4;
+  padding: 1.8rem 1rem;
+}
+#about-content h1{
+  font-size: 3rem;
+  padding-bottom: 1.8rem;
 }
