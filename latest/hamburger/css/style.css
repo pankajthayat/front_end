@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --secondary-color: rgba(229, 148, 0, 0.9);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+
+/* hamburger wrap */
+#hamburger-area {
+  width: 55px;
+  height: 55px;
+  background: var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 10px;
+}
+
+/* checkbox for check state */
+input[type="checkbox"] {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 99;
+  opacity: 0;
+}
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+/* hamburger */
+.hamburger {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+.hamburger::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #fff;
+  display: block;
+  width: 100%;
+  bottom: 10px;
+}
+
+.hamburger::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  display: block;
+  top: 10px;
+}
+
+input[type="checkbox"]:checked + .hamburger::before {
+  transform: rotate(130deg);
+  bottom: 0;
+}
+input[type="checkbox"]:checked + .hamburger::after {
+    transform: rotate(-130deg);
+    top:0;
+  }
+  
+  input[type="checkbox"]:checked + .hamburger {
+   height: 0;
+  }
+  
+  input[type="checkbox"]:checked{
+    cursor: pointer;
+    transition: all;
+    transition-duration: 1s;
+  }
+
+input[type="checkbox"]:checked:hover {
+  transform: rotate(90deg);
+
+}
+
+
+
+
+
+/* showcase */
+#showcase {
+  background: var(--primary-color);
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+#showcase::before {
+  content: "";
+  background: url("../img/showcase.jpg") center center/cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+h1 {
+  font-size: 3rem;
+}
+p {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+.container {
+  max-width: 1000px;
+}
+button {
+  border: 0;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 2rem;
+}
