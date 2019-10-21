@@ -1,0 +1,138 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+body{
+  overflow: hidden;
+}
+
+a{
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 1rem;
+  margin: 0.5rem;
+}
+/* utility */
+.bg-dark{
+  background: #333;
+  color: #fff;
+  transition:all;
+  transition-duration: 1s;
+
+}
+.bg-dark:hover{
+  background: #f4f4f4;
+  color:#333;
+}
+.bg-light{
+  background: #f4f4f4;
+  color:#333;
+  transform: all;
+  transition-duration: 1s;
+}
+
+.bg-light:hover{
+  background: #333;
+  color: #fff;
+}
+.container{
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  line-height: 1.2;
+}
+h1{
+  padding: 1rem;
+  font-size: 3rem;
+}
+button{
+  margin: 1.5rem 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+}
+p{
+  font-size: 1.2rem;
+}
+.container>div{
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+
+/* Welcome */
+#welcome{
+  background: teal;
+  color: #fff;
+}
+
+
+
+/* Page 2 */
+#page2{
+  background: rgb(235, 190, 136);
+}
+
+
+
+
+/* Page 3 */
+#page3{
+  background:seagreen;
+  color:#fff;
+}
+
+#page4{
+  background:slateblue;
+  color:#fff;
+}
+
+
+/* position: absolute;
+top: 50%;
+transform: translate(-50%, -50%);
+left: 50%; */
+
+#welcome div h1{
+  /* transform: translateY(-1200px); */
+  animation: vertical;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+
+  /* transform: translate(-50rem, 50%); */
+
+}
+
+#welcome div p{
+  animation: text;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  transform: translateX(-1200px);
+  animation-delay: 1s;
+  padding: 1rem;
+}
+
+@keyframes vertical{
+  /* we can it to tranlateX in above also */
+  from{
+    transform: translateY(-1200px);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+@keyframes text{
+
+  to{
+    transform: translateX(0);
+  }
+}

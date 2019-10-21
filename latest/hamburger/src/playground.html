@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Playground</title>
+    <style>
+        body{
+            height: 100vh;
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+        }
+    #area{
+        width: 500px;
+        height: 5px;
+        background: #333;
+    }
+    #area::after{
+        content: "";
+        width: 500px;
+        height: 5px;
+        margin-top: 15px;
+        background: red;
+        display: block;
+    }
+    #area::before{
+        content: "";
+        width: 500px;
+        height: 5px;
+        margin-bottom: 15px;
+        background: blue;
+        display: block;
+    }
+    </style>
+</head>
+<body>
+        <div id="area">
+            
+        </div>
+</body>
+</html>
