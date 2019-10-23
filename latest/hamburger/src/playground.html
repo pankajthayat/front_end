@@ -8,38 +8,26 @@
     <style>
         body{
             height: 100vh;
-            vertical-align: middle;
-            display: flex;
-            align-items: center;
         }
-    #area{
-        width: 500px;
-        height: 5px;
-        background: #333;
-    }
-    #area::after{
-        content: "";
-        width: 500px;
-        height: 5px;
-        margin-bottom: 35px;
-        /* margin-top: 15px; */
-        background: red;
-        display: block;
-    }
-    #area::before{
-        content: "";
-        width: 500px;
-        height: 5px;
-        margin-top: 35px;
-        /* margin-bottom: 15px; */
-        background: blue;
-        display: block;
-    }
+        .item{
+            width:200px;
+            height: 100px;
+            background: coral;
+            margin: 10px;
+        }
+        #area{
+            /* flex:none; */
+            display: flex;
+            flex:none;
+        }
     </style>
 </head>
 <body>
         <div id="area">
-            
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
         </div>
 </body>
 </html>

@@ -23,13 +23,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 9999999999;
 }
 
 input[type="checkbox"] {
   height: 45px;
   position: absolute;
-  z-index: 99;
+  z-index: 99999;
   width: 45px;
   opacity: 0;
 }
@@ -39,15 +39,17 @@ input[type="checkbox"]:hover{
 #hm-container {
   width: 45px;
   height: 45px;
-  background: green;
+  /* background: green; */
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 99;
+  padding: 10px;
 }
 
 input[type="checkbox"] + #hm-container > .ham {
-  width: 35px;
+  width: 100%;
   height: 2px;
   background: #fff;
   position: relative;
@@ -55,31 +57,45 @@ input[type="checkbox"] + #hm-container > .ham {
 
 input[type="checkbox"] + #hm-container > .ham::before {
     content: "";
-  width: 35px;
+    width: 100%;
   height: 2px;
   background: #fff;
   position: absolute;
   bottom: 10px;
+  transition: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
 }
 input[type="checkbox"] + #hm-container > .ham::after {
     content: "";
-  width: 35px;
+    width: 100%;
   height: 2px;
   background: #fff;
   position: absolute;
   top: 10px;
+  transition: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
 }
 
 input[type="checkbox"]:checked + #hm-container > .ham {
-    width: 35px;
+  width: 100%;
     height: 2px;
     background: #fff;
     position: relative;
+    background: transparent;
     
   }
 
+  input[type="checkbox"]:checked:hover + #hm-container {
+   transform: rotate(90deg);
+   transition: all;
+   transition-duration: 0.2s;
+   
+  }
+
 input[type="checkbox"]:checked + #hm-container > .ham::before {
-    content: "";
+  content: "";
   width: 35px;
   height: 2px;
   background: #fff;
@@ -89,7 +105,7 @@ input[type="checkbox"]:checked + #hm-container > .ham::before {
 
 }
 input[type="checkbox"]:checked + #hm-container > .ham::after {
-    content: "";
+  content: "";
   width: 35px;
   height: 2px;
   background: #fff;
@@ -97,6 +113,88 @@ input[type="checkbox"]:checked + #hm-container > .ham::after {
   transform: rotate(130deg);
   top:0;
 }
+
+#hm-container:hover{
+  z-index: 9999;
+}
+#area{
+  z-index: -9;
+  background: var(--overlay-color);
+  width: 200vw;
+  height: 200vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff; 
+  text-align: center;
+  border-radius: 50%;
+  opacity: 0; 
+
+}
+input[type="checkbox"]:checked~.menu>#area{
+  transform: scale(0,0);
+  z-index: 999;
+  opacity: 1; 
+  animation: areaAnimation;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;;
+  /* transition: all;
+  transition-duration: 1s;
+  transition-timing-function: ease; */
+
+}
+
+@keyframes areaAnimation{
+
+  to{
+    transform: scale(1,1);
+
+  }
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#area ul li{
+  list-style: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  
+}
+
+
+#area ul li a{
+text-decoration: none;
+color: inherit;
+} 
+
+/* input[type="checkbox"]:checked~#area{
+  opacity: 1;
+  z-index: 999;
+} */
+
+
+
+
+
+/* input[type="checkbox"]:checked~#area{
+  opacity: 1;
+  z-index: 999;
+} */
+
+
+
+
 
 
 
@@ -148,4 +246,9 @@ button {
   background: var(--primary-color);
   color: #fff;
   padding: 0.8rem 2rem;
+}
+
+button:hover{
+  cursor: pointer;
+  opacity: 0.8;
 }
