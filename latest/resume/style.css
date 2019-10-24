@@ -1,0 +1,53 @@
+:root{
+    --primary-color: #425b84;
+    --secondary-color: #5b7bb4;
+    --max-width: 1100px;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* common */
+h1,h3{
+    padding: 0.5rem;
+}
+
+i{
+    padding: 0 0.5rem;
+}
+
+
+
+
+/* header */
+header{
+    background: #5b7bb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.heading{
+    text-align: center;
+    padding: 1.5rem;
+}
+
+
+/* section */
+
+section{
+    background: var(--primary-color);
+    /* color: #fff; */
+    position: relative;
+}
+ul{
+    position: relative;
+}
+li{
+ 
+}
+li div{
+
+}
