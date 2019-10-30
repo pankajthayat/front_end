@@ -1,0 +1,77 @@
+
+
+.text-center{
+    text-align: center;
+}
+
+.container{
+    max-width: $website-width;
+    margin: auto;
+    height: 100%;
+    overflow: hidden; // TO-DO: look what overflow does
+}
+
+%btn-shared{
+    padding: 1rem 2rem;
+    border: none;
+    transition: background;
+    transition-duration: 1s;
+    &:hover{
+        background: $main-color;
+        cursor: pointer;
+    }
+}
+
+.btn{
+    &-light{
+        @extend %btn-shared;
+
+    }
+
+    &-primary{
+        @extend %btn-shared;
+
+    }
+    &-dark{
+        @extend %btn-shared;
+        color: #fff;
+
+    }
+}
+.btn{
+//     border-bottom: 2px solid transparent;
+// padding-bottom: 0.5rem ;
+transition: all;
+transition-duration: 0.5;
+}
+.btn:hover{
+    border-bottom: 2px solid $medium-color;
+padding-bottom: 0.5rem ;
+}
+
+.current{
+border-bottom: 2px solid $main-color;
+padding-bottom: 0.5rem ;
+
+
+}
+
+.p-2{
+    padding: 1.5rem;
+}
+.py-2{
+    padding: 0 1.5rem;
+}
+.px-2{
+    padding: 1.5rem 0;
+}
+
+.p-1{
+    padding: 1rem;
+}
+.py-1{
+    padding: 0 1rem;
+}
+.px-1{
+    padding: 1rem 0;
+}

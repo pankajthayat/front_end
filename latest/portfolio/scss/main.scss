@@ -1,3 +1,6 @@
+@import "config";
+@import "utility";
+
 *{
     padding: 0;
     margin: 0;
@@ -9,8 +12,55 @@
 
 a{
     text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
 }
 
 ul{
     list-style: none;
+}
+
+// header
+header{
+    height: 100vh;
+    width: 100%;
+    background: url("../img/showcase.jpg") center right/cover;
+
+}
+#logo{
+    width: 100px;
+    padding: 0.8rem;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul{
+        display: flex;
+        padding: 1rem;
+    }
+    li{
+        padding: 0.8rem 1.5rem;
+    }
+}
+#header{
+    &-content{
+        margin: auto;
+        display: table;
+        height: 100%;
+        div{
+           display: table-cell;
+           vertical-align: middle; 
+        }
+        p{
+            color: #fff;
+            font-size: 1.5rem;
+            &:first-child{
+                font-size: 3rem;
+            }
+        }
+
+    }
+
 }
