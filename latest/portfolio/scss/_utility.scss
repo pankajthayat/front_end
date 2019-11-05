@@ -46,7 +46,7 @@ transition-duration: 0.5;
 }
 .btn:hover{
     border-bottom: 2px solid $medium-color;
-padding-bottom: 0.5rem ;
+// padding-bottom: 0.5rem ;
 }
 
 .current{
@@ -60,10 +60,16 @@ padding-bottom: 0.5rem ;
     padding: 1.5rem;
 }
 .py-2{
-    padding: 0 1.5rem;
+   
+    padding: 2rem 0;
+}
+
+.py-3{
+   
+    padding: 3rem 0;
 }
 .px-2{
-    padding: 1.5rem 0;
+    padding: 0 2rem;
 }
 
 .p-1{
@@ -74,4 +80,14 @@ padding-bottom: 0.5rem ;
 }
 .px-1{
     padding: 1rem 0;
+}
+
+
+.box{
+    padding: 2rem;
+    flex: 1;
+}
+
+.lead{
+    font-size:1.2rem
 }
