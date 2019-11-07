@@ -75,12 +75,30 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); }
 
 .row {
+  margin: 0 auto;
+  margin-bottom: 10px;
   max-width: 114rem; }
-  .row .col-1-of-2 {
-    width: calc((100%-4rem)/2);
+  .row::after {
+    content: "";
+    clear: both;
+    display: block; }
+  .row [class^="col-"] {
+    float: left;
     background: coral; }
-    .row .col-1-of-2:not(:last-child) {
+    .row [class^="col-"]:not(:last-child) {
       margin-right: 4rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 4rem)/2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 8rem)/3); }
+  .row .col-2-of-3 {
+    width: calc(((100% - 8rem)/3) *2 + 4rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 12rem)/4); }
+  .row .col-2-of-4 {
+    width: calc( ( ((100% - 12rem)/4)*2 ) + 4rem); }
+  .row .col-3-of-4 {
+    width: calc( ( ((100% - 12rem)/4)*3 ) + 2*4rem); }
 
 /* header */
 .header {
