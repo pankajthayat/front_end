@@ -8,7 +8,6 @@
    
     [class^="col-"]{
         float: left;
-        background: coral;
         &:not(:last-child){
             margin-right: $horizontal-gutter;
         }
