@@ -32,7 +32,12 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 25px; }
+  padding: 25px;
+  font-size: 1.6rem; }
+
+.about .header-primary h1 {
+  font-size: 3rem;
+  letter-spacing: 5px; }
 
 .btn:link, .btn:active {
   text-decoration: none;
@@ -74,6 +79,52 @@ body {
     transform: translateY(-2px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); }
 
+.px-1 {
+  padding: 0 1rem; }
+
+.px-2 {
+  padding: 0 1.5rem; }
+
+.px-3 {
+  padding: 0 3rem; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 1.5rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.p-bottom--large {
+  padding-bottom: 4rem; }
+
+.p-bottom--medium {
+  padding-bottom: 2rem; }
+
+.header-primary {
+  display: inline-block;
+  margin: o auto;
+  background: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+  -webkit-background-clip: text; }
+  .header-primary h1 {
+    color: transparent;
+    font-weight: 900; }
+
+.text-center {
+  text-align: center; }
+
+.btn-secondry:link, .btn-secondry:active {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 2px solid #7ed56f;
+  transition: all 0.2s; }
+
+.btn-secondry:hover {
+  background: red;
+  transform: translateY(20px); }
+
 .row {
   margin: 0 auto;
   margin-bottom: 10px;
@@ -83,8 +134,7 @@ body {
     clear: both;
     display: block; }
   .row [class^="col-"] {
-    float: left;
-    background: coral; }
+    float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 4rem; }
   .row .col-1-of-2 {
@@ -106,7 +156,7 @@ body {
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
   .header__logo img {
     height: 4rem;
@@ -137,6 +187,11 @@ body {
       animation-duration: 1s;
       animation-timing-function: ease-out;
       margin-bottom: 3rem; }
+
+.about-a {
+  background: #f7f7f7;
+  margin-top: -20vh;
+  padding-top: 25rem; }
 
 .ppppp-header {
   height: 95vh;

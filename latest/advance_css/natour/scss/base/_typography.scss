@@ -4,4 +4,13 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 25px;
+  font-size: $default-font-size;
+}
+.about{
+  .header-primary{
+    h1{
+      font-size: 3rem;
+      letter-spacing: 5px;
+    }
+  }
 }
