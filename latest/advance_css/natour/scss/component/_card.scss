@@ -1,0 +1,39 @@
+.card{
+    margin-top: 10rem;
+    height: 40rem;
+    width: 20rem;
+   position: relative;
+    color: #fff;
+    transition: all 1s;-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    perspective: 15rem;
+    -moz-perspective: 15rem;
+    &-front{
+        transform: rotateY(0deg);
+        height: 100%;
+        width: 100%;
+        background: $dark-green;
+        position: absolute;
+        top:0;
+        left:0;
+        // -webkit-backface-visibility: hidden;
+        // backface-visibility: hidden;
+    }
+
+    &-back{
+        height: 100%;
+        width: 100%;
+        background: coral;
+        position: absolute;
+        top:0;
+        left:0;
+        transform: rotateY(-180deg);
+        // -webkit-backface-visibility: hidden;
+        // backface-visibility: hidden;
+
+    }
+
+    &:hover{
+        transform: rotateY(180deg);
+    }
+}
