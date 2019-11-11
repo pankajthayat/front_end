@@ -153,33 +153,44 @@ body {
 
 .card {
   margin-top: 10rem;
-  height: 40rem;
-  width: 20rem;
+  height: 50rem;
+  width: 35rem;
   position: relative;
-  color: #fff;
-  transition: all 1s;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  perspective: 15rem;
-  -moz-perspective: 15rem; }
-  .card-front {
+  perspective: 150rem; }
+  .card:hover .card-side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card-side--back {
+    transform: rotateY(0); }
+  .card-side {
     transform: rotateY(0deg);
     height: 100%;
     width: 100%;
-    background: #28b485;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .card-back {
-    height: 100%;
-    width: 100%;
-    background: coral;
     position: absolute;
     top: 0;
     left: 0;
-    transform: rotateY(-180deg); }
-  .card:hover {
-    transform: rotateY(180deg); }
+    perspective: 150rem;
+    transition: all 1s;
+    backface-visibility: hidden;
+    box-shadow: 0px 2px 1rem rgba(0, 0, 0, 0.1); }
+    .card-side--front {
+      background: #fff; }
+    .card-side--back {
+      transform: rotateY(180deg);
+      background: linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .card-photo {
+    background: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg") center center/cover;
+    background-blend-mode: screen;
+    height: 45%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    filter: contrast();
+    position: relative; }
+    .card-photo-text {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8));
+      padding: 5px;
+      z-index: 99; }
 
 .row {
   margin: 0 auto;
@@ -285,6 +296,9 @@ body {
   transform: skewY(-5deg); }
   .about-b > * {
     transform: skewY(5deg); }
+
+.about-c {
+  background: #f7f7f7; }
 
 .ppppp-header {
   height: 95vh;
